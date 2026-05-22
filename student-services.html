@@ -1,0 +1,1035 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>الدراسة في الصين | ALHASANI CHINA — خدمات الطلاب الدوليين</title>
+<meta name="description" content="خدمات الطلاب الدوليين في الصين — قبول جامعي، منح دراسية، تأشيرة، سكن واستقبال من المطار"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@300;400;500;600;700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<!-- lenis removed: native scroll is faster -->
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#0A1B3D;--navy2:#0E2148;--dark:#06122B;
+  --red:#E0202C;--red2:#C81923;--gold:#F4B400;
+  --ink:#1A1A1A;--muted:#6B7280;--line:#E5E7EB;
+  --bg:#F6F7F9;--f:'Noto Kufi Arabic',sans-serif;--fp:'DM Sans',sans-serif;
+}
+html{scroll-behavior:smooth;overflow-x:hidden;max-width:100vw}
+body{font-family:var(--f);background:var(--bg);color:var(--ink);overflow-x:hidden;direction:rtl}
+#preloader{position:fixed;inset:0;background:var(--dark);z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px}
+#preloader .pl-logo{width:100px;height:100px;border-radius:50%;object-fit:cover;box-shadow:0 0 40px rgba(224,32,44,.5);opacity:0;transform:scale(.7)}
+#preloader .pl-brand{font-family:var(--fp);font-weight:700;font-size:1.4rem;color:#fff;letter-spacing:3px;opacity:0;transform:translateY(20px)}
+#preloader .pl-sub{font-size:.9rem;color:rgba(255,255,255,.55);opacity:0;transform:translateY(10px)}
+#preloader .pl-bar-wrap{width:220px;height:3px;background:rgba(255,255,255,.1);border-radius:10px;overflow:hidden}
+#preloader .pl-bar{height:100%;width:0;background:linear-gradient(90deg,var(--red),var(--gold));border-radius:10px}
+#scrollProg{position:fixed;top:0;left:0;width:0%;height:3px;background:linear-gradient(90deg,var(--red),var(--gold));z-index:1000}
+.wa-float{position:fixed;left:20px;bottom:30px;z-index:800;background:#25D366;color:#fff;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.6rem;box-shadow:0 4px 20px rgba(37,211,102,.45);text-decoration:none;animation:waPulse 2.5s infinite}
+@keyframes waPulse{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,.45),0 0 0 0 rgba(37,211,102,.4)}50%{box-shadow:0 4px 20px rgba(37,211,102,.45),0 0 0 14px rgba(37,211,102,0)}}
+.topbar{background:var(--dark);padding:8px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.topbar-inner{max-width:1280px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.topbar-phones{display:flex;gap:20px;align-items:center}
+.topbar-phones a{color:rgba(255,255,255,.85);text-decoration:none;font-size:.82rem;font-family:var(--fp);display:flex;align-items:center;gap:6px;transition:.2s}
+.topbar-phones a:hover{color:var(--gold)}
+.topbar-phones a i{color:var(--gold)}
+.topbar-social{display:flex;gap:10px}
+.topbar-social a{width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.08);color:rgba(255,255,255,.7);display:flex;align-items:center;justify-content:center;font-size:.85rem;text-decoration:none;transition:.25s}
+.topbar-social a:hover{background:var(--red);color:#fff}
+.navbar{position:sticky;top:0;z-index:900;background:#fff;border-bottom:1px solid var(--line);transition:box-shadow .3s}
+.navbar.scrolled{box-shadow:0 4px 24px rgba(10,27,61,.1)}
+.nav-inner{max-width:1280px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:70px;gap:16px}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.nav-logo img{width:44px;height:44px;border-radius:50%;object-fit:cover}
+.nav-logo span{font-family:var(--fp);font-weight:700;font-size:1rem;color:var(--navy);line-height:1.2}
+.nav-logo span small{display:block;font-size:.65rem;color:var(--muted);font-weight:400;letter-spacing:1.5px}
+.nav-links{display:flex;align-items:center;gap:4px;list-style:none}
+.nav-links a{padding:8px 14px;border-radius:8px;color:var(--navy);font-size:.88rem;font-weight:500;text-decoration:none;transition:.2s;white-space:nowrap}
+.nav-links a:hover,.nav-links a.active{background:rgba(10,27,61,.06);color:var(--red)}
+.nav-cta{background:var(--red);color:#fff;padding:10px 22px;border-radius:10px;font-weight:700;font-size:.88rem;text-decoration:none;white-space:nowrap;transition:.2s;font-family:var(--f)}
+.nav-cta:hover{background:var(--red2);transform:translateY(-1px)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none}
+.hamburger span{display:block;width:24px;height:2px;background:var(--navy);transition:.3s;border-radius:2px}
+.drawer{position:fixed;inset:0;z-index:950;pointer-events:none}
+.drawer-overlay{position:absolute;inset:0;background:rgba(0,0,0,.5);opacity:0;transition:.3s}
+.drawer-panel{position:absolute;right:0;top:0;width:300px;height:100%;background:#fff;transform:translateX(100%);transition:.35s cubic-bezier(.4,0,.2,1);padding:24px;display:flex;flex-direction:column;gap:8px}
+.drawer.open{pointer-events:all}
+.drawer.open .drawer-overlay{opacity:1}
+.drawer.open .drawer-panel{transform:translateX(0)}
+.drawer-close{align-self:flex-start;background:none;border:none;font-size:1.4rem;cursor:pointer;color:var(--navy);padding:4px;margin-bottom:8px}
+.drawer-logo{display:flex;align-items:center;gap:10px;margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid var(--line)}
+.drawer-logo img{width:40px;height:40px;border-radius:50%;object-fit:cover}
+.drawer-logo span{font-family:var(--fp);font-weight:700;font-size:.95rem;color:var(--navy)}
+.drawer-links{list-style:none;display:flex;flex-direction:column;gap:4px}
+.drawer-links a{display:block;padding:12px 16px;border-radius:8px;color:var(--navy);text-decoration:none;font-size:.95rem;font-weight:500;transition:.2s}
+.drawer-links a:hover{background:var(--bg);color:var(--red)}
+.drawer-cta{margin-top:16px;background:var(--red);color:#fff;padding:14px;border-radius:10px;text-align:center;text-decoration:none;font-weight:700;font-size:.95rem;display:block}
+.marquee-strip{background:var(--red);overflow:hidden;padding:10px 0;white-space:nowrap;direction:ltr}
+.marquee-inner{display:inline-flex;gap:0;animation:marqueeRTL 30s linear infinite}
+.marquee-inner span{color:#fff;font-size:.82rem;font-weight:500;padding:0 28px;border-right:1px solid rgba(255,255,255,.25)}
+@keyframes marqueeRTL{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+/* HERO */
+#hero{position:relative;min-height:100vh;min-height:100dvh;display:flex;align-items:center;overflow:hidden;background:var(--dark)}
+#heroBg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1562774053-701939374585?w=1800&q=80');background-size:cover;background-position:center;opacity:.2}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(6,18,43,.96) 40%,rgba(10,27,61,.82) 100%)}
+.hero-content{position:relative;z-index:2;max-width:1280px;margin:0 auto;padding:100px 24px 80px;width:100%}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(244,180,0,.12);border:1px solid rgba(244,180,0,.3);color:var(--gold);padding:8px 20px;border-radius:50px;font-size:.82rem;font-weight:600;margin-bottom:28px;opacity:0;transform:translateY(20px)}
+.hero-h1{font-size:clamp(2.2rem,5.5vw,4rem);font-weight:900;color:#fff;line-height:1.2;margin-bottom:16px;opacity:0;transform:translateY(30px)}
+.hero-h1 .accent{color:var(--gold)}
+.hero-sub{font-size:clamp(.95rem,1.8vw,1.15rem);color:rgba(255,255,255,.72);max-width:620px;line-height:1.9;margin-bottom:36px;opacity:0;transform:translateY(20px)}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:60px;opacity:0;transform:translateY(20px)}
+.btn-primary{background:var(--red);color:#fff;padding:15px 30px;border-radius:12px;font-weight:700;font-size:1rem;text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:.25s;border:2px solid var(--red);min-height:52px;-webkit-tap-highlight-color:transparent}
+.btn-primary:hover{background:var(--red2);transform:translateY(-2px);box-shadow:0 8px 24px rgba(224,32,44,.4)}
+.btn-outline{background:transparent;color:#fff;padding:15px 30px;border-radius:12px;font-weight:700;font-size:1rem;text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:.25s;border:2px solid rgba(255,255,255,.4);min-height:52px;-webkit-tap-highlight-color:transparent}
+.btn-outline:hover{background:rgba(255,255,255,.1);border-color:#fff;transform:translateY(-2px)}
+.btn-gold{background:var(--gold);color:var(--dark);padding:15px 30px;border-radius:12px;font-weight:700;font-size:1rem;text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:.25s;border:2px solid var(--gold);min-height:52px;-webkit-tap-highlight-color:transparent}
+.btn-gold:hover{background:#e6a900;transform:translateY(-2px);box-shadow:0 8px 24px rgba(244,180,0,.35)}
+/* CONTAINER & COMMONS */
+.container{max-width:1280px;margin:0 auto;padding:0 24px}
+.sec-tag{display:inline-block;background:rgba(224,32,44,.1);color:var(--red);font-size:.75rem;font-weight:700;padding:5px 16px;border-radius:50px;letter-spacing:1px;margin-bottom:14px}
+.sec-title{font-size:clamp(1.7rem,3.5vw,2.6rem);font-weight:800;color:var(--navy);line-height:1.25;margin-bottom:12px}
+.sec-sub{color:var(--muted);font-size:1rem;line-height:1.8;max-width:640px}
+.text-center{text-align:center}
+.text-center .sec-sub{margin:0 auto}
+/* clip sections — prevents translateX animations bleeding outside viewport on iOS */
+section,.footer{overflow-x:clip}
+/* SERVICE DETAIL CARDS */
+.services-detail{background:#fff;padding:90px 0}
+.detail-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;margin-top:50px}
+.detail-card{border:1px solid var(--line);border-radius:24px;padding:36px;background:var(--bg);transition:.3s;position:relative;overflow:hidden}
+.detail-card::before{content:'';position:absolute;top:0;right:0;width:4px;height:100%;background:linear-gradient(180deg,var(--red),var(--gold))}
+.detail-card:hover{transform:translateY(-5px);box-shadow:0 20px 50px rgba(10,27,61,.1);background:#fff}
+.dc-header{display:flex;align-items:center;gap:16px;margin-bottom:18px}
+.dc-icon{width:60px;height:60px;border-radius:16px;background:linear-gradient(135deg,var(--navy),var(--navy2));display:flex;align-items:center;justify-content:center;font-size:1.4rem;color:var(--gold);flex-shrink:0}
+.dc-title{font-size:1.2rem;font-weight:800;color:var(--navy)}
+.dc-sub{font-size:.82rem;color:var(--muted);margin-top:2px}
+.dc-desc{font-size:.9rem;color:var(--muted);line-height:1.8;margin-bottom:18px}
+.dc-includes{border-top:1px solid var(--line);padding-top:18px}
+.dc-includes h5{font-size:.82rem;font-weight:700;color:var(--navy);margin-bottom:12px;text-transform:uppercase;letter-spacing:.5px}
+.dc-list{list-style:none;display:flex;flex-direction:column;gap:8px}
+.dc-list li{display:flex;align-items:center;gap:10px;font-size:.86rem;color:var(--ink)}
+.dc-list li i{color:var(--gold);font-size:.75rem;flex-shrink:0}
+/* HOW IT WORKS */
+.how-it-works{background:var(--bg);padding:90px 0}
+.steps-grid{display:flex;gap:0;margin-top:50px;position:relative}
+.steps-grid::before{content:'';position:absolute;top:36px;right:60px;left:60px;height:2px;background:linear-gradient(90deg,var(--red),var(--gold));z-index:0}
+.step{flex:1;text-align:center;padding:0 16px;position:relative;z-index:1}
+.step-num{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--red));color:#fff;font-family:var(--fp);font-size:1.3rem;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;border:4px solid var(--bg);box-shadow:0 4px 16px rgba(10,27,61,.2)}
+.step-title{font-size:.95rem;font-weight:700;color:var(--navy);margin-bottom:6px}
+.step-desc{font-size:.82rem;color:var(--muted);line-height:1.7}
+/* WHY STUDY */
+.why-study{background:#fff;padding:90px 0}
+.why-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;margin-top:50px}
+.why-item{text-align:center;padding:28px 16px}
+.why-icon{width:64px;height:64px;border-radius:20px;background:linear-gradient(135deg,rgba(10,27,61,.07),rgba(224,32,44,.07));display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.5rem;color:var(--navy);transition:.3s}
+.why-item:hover .why-icon{background:linear-gradient(135deg,var(--navy),var(--red));color:var(--gold)}
+.why-title{font-size:.95rem;font-weight:700;color:var(--navy);margin-bottom:6px}
+.why-desc{font-size:.82rem;color:var(--muted);line-height:1.65}
+/* UNIVERSITIES */
+.universities{background:var(--bg);padding:90px 0}
+.uni-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:50px}
+.uni-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px 24px;transition:.3s;display:flex;flex-direction:column;gap:10px}
+.uni-card:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(10,27,61,.1)}
+.uni-rank{display:inline-block;background:rgba(244,180,0,.15);color:#B8880A;font-family:var(--fp);font-size:.72rem;font-weight:700;padding:3px 12px;border-radius:50px;margin-bottom:4px}
+.uni-name{font-size:1.05rem;font-weight:800;color:var(--navy)}
+.uni-name-en{font-size:.78rem;font-family:var(--fp);color:var(--muted)}
+.uni-info{display:flex;gap:12px;flex-wrap:wrap;margin-top:4px}
+.uni-info span{font-size:.78rem;color:var(--muted);display:flex;align-items:center;gap:5px}
+.uni-info span i{color:var(--red);font-size:.7rem}
+/* TESTIMONIALS */
+.testimonials{background:#fff;padding:90px 0}
+.testi-wrap{position:relative;overflow:hidden;margin-top:50px}
+.testi-track{display:flex;transition:transform .5s cubic-bezier(.4,0,.2,1)}
+.testi-slide{min-width:100%;padding:0 60px}
+.testi-card{background:var(--bg);border:1px solid var(--line);border-radius:24px;padding:44px;text-align:center;max-width:720px;margin:0 auto}
+.testi-stars{color:var(--gold);font-size:1.1rem;margin-bottom:16px;letter-spacing:3px}
+.testi-text{font-size:1.05rem;color:var(--ink);line-height:2;font-style:italic;margin-bottom:24px}
+.testi-author{display:flex;align-items:center;gap:14px;justify-content:center}
+.testi-avatar{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--red));display:flex;align-items:center;justify-content:center;font-size:1.2rem;font-weight:700;color:#fff;font-family:var(--fp)}
+.testi-name{font-weight:700;color:var(--navy);font-size:.95rem}
+.testi-country{font-size:.78rem;color:var(--muted);display:flex;align-items:center;gap:4px;margin-top:2px}
+.testi-dots{display:flex;justify-content:center;gap:8px;margin-top:24px}
+.testi-dot{width:8px;height:8px;border-radius:50%;background:var(--line);cursor:pointer;transition:.3s;border:none}
+.testi-dot.active{background:var(--red);width:24px;border-radius:50px}
+/* FAQ */
+.faq{background:var(--bg);padding:90px 0}
+.faq-list{max-width:800px;margin:50px auto 0;display:flex;flex-direction:column;gap:12px}
+.faq-item{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.faq-q{width:100%;padding:20px 24px;text-align:right;font-family:var(--f);font-size:.95rem;font-weight:700;color:var(--navy);cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px;background:none;border:none}
+.faq-q:hover{color:var(--red)}
+.faq-q i{transition:.35s;flex-shrink:0;color:var(--red)}
+.faq-item.open .faq-q i{transform:rotate(180deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s ease}
+.faq-a-inner{padding:0 24px 20px;font-size:.9rem;color:var(--muted);line-height:1.85}
+.faq-item.open .faq-a{max-height:400px}
+/* CONTACT/APPLY */
+.apply-section{background:#fff;padding:90px 0}
+.apply-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:48px;margin-top:50px;align-items:start}
+.apply-info h3{font-size:1.4rem;font-weight:700;color:var(--navy);margin-bottom:16px}
+.apply-info p{font-size:.95rem;color:var(--muted);line-height:1.85;margin-bottom:24px}
+.apply-contact-items{display:flex;flex-direction:column;gap:14px}
+.aci{display:flex;align-items:center;gap:12px;padding:16px 18px;background:var(--bg);border:1px solid var(--line);border-radius:12px}
+.aci .aci-icon{width:40px;height:40px;border-radius:10px;background:var(--navy);display:flex;align-items:center;justify-content:center;font-size:.95rem;color:var(--gold);flex-shrink:0}
+.aci .aci-label{font-size:.75rem;color:var(--muted);margin-bottom:2px}
+.aci .aci-val{font-size:.88rem;font-weight:600;color:var(--navy)}
+.aci .aci-val a{color:var(--navy);text-decoration:none}
+.aci .aci-val a:hover{color:var(--red)}
+.apply-form{background:var(--bg);border:1px solid var(--line);border-radius:20px;padding:40px}
+.apply-form h3{font-size:1.3rem;font-weight:700;color:var(--navy);margin-bottom:24px}
+.form-group{margin-bottom:18px}
+.form-group label{display:block;font-size:.84rem;font-weight:600;color:var(--navy);margin-bottom:7px}
+.form-group input,.form-group textarea,.form-group select{width:100%;padding:12px 16px;border:1px solid var(--line);border-radius:10px;font-family:var(--f);font-size:.9rem;color:var(--ink);outline:none;transition:.2s;background:#fff;direction:rtl}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--navy);box-shadow:0 0 0 3px rgba(10,27,61,.08)}
+.form-group textarea{resize:vertical;min-height:100px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form-submit{width:100%;padding:14px;background:var(--red);color:#fff;border:none;border-radius:10px;font-family:var(--f);font-size:1rem;font-weight:700;cursor:pointer;transition:.25s;display:flex;align-items:center;justify-content:center;gap:10px}
+.form-submit:hover{background:var(--red2);transform:translateY(-1px)}
+/* CTA BANNER */
+.cta-banner{background:linear-gradient(135deg,var(--dark),var(--navy));padding:80px 0;text-align:center;position:relative;overflow:hidden}
+.cta-banner::before{content:'';position:absolute;top:-80px;left:50%;transform:translateX(-50%);width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(244,180,0,.1),transparent 70%)}
+.cta-banner h2{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;color:#fff;margin-bottom:12px;position:relative}
+.cta-banner p{color:rgba(255,255,255,.65);font-size:1rem;margin-bottom:32px;position:relative}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative}
+/* FOOTER */
+.footer{background:var(--dark);color:rgba(255,255,255,.75);padding:70px 0 0}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1.2fr;gap:40px}
+.footer-brand .fb-logo{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.footer-brand .fb-logo img{width:44px;height:44px;border-radius:50%;object-fit:cover}
+.footer-brand .fb-logo span{font-family:var(--fp);font-weight:700;font-size:1rem;color:#fff}
+.footer-brand p{font-size:.85rem;line-height:1.85;color:rgba(255,255,255,.55);margin-bottom:20px}
+.footer-social{display:flex;gap:10px}
+.footer-social a{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.07);color:rgba(255,255,255,.65);display:flex;align-items:center;justify-content:center;font-size:.9rem;text-decoration:none;transition:.25s}
+.footer-social a:hover{background:var(--red);color:#fff}
+.footer-col h4{font-size:.92rem;font-weight:700;color:#fff;margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.1)}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:9px}
+.footer-links a{color:rgba(255,255,255,.55);text-decoration:none;font-size:.84rem;transition:.2s;display:flex;align-items:center;gap:6px}
+.footer-links a:hover{color:var(--gold)}
+.footer-contact-list{display:flex;flex-direction:column;gap:12px}
+.fci-f{display:flex;align-items:flex-start;gap:10px;font-size:.83rem;color:rgba(255,255,255,.55)}
+.fci-f i{color:var(--gold);margin-top:2px;flex-shrink:0}
+.fci-f a{color:rgba(255,255,255,.55);text-decoration:none}
+.fci-f a:hover{color:var(--gold)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);margin-top:50px;padding:20px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.footer-bottom p{font-size:.8rem;color:rgba(255,255,255,.35)}
+/* SCROLL ANIMATIONS — IntersectionObserver, fire once, NEVER reverse */
+.anm{transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1),filter .7s cubic-bezier(.22,1,.36,1)}
+.anm.anm-up{opacity:0;transform:translateY(60px);filter:blur(5px)}
+.anm.anm-left{opacity:0;transform:translateX(-72px);filter:blur(4px)}
+.anm.anm-right{opacity:0;transform:translateX(72px);filter:blur(4px)}
+.anm.anm-scale{opacity:0;transform:scale(.84) translateY(30px);filter:blur(5px)}
+.anm.anm-tag{opacity:0;transform:scale(.78) translateY(14px)}
+.anm.in{opacity:1!important;transform:none!important;filter:blur(0px)!important}
+@media(max-width:1100px){
+  .footer-grid{grid-template-columns:1fr 1fr 1fr}
+  .why-grid{grid-template-columns:repeat(3,1fr)}
+  .detail-grid{grid-template-columns:1fr}
+}
+@media(max-width:900px){
+  .nav-links,.nav-cta{display:none}
+  .hamburger{display:flex}
+  .steps-grid{flex-direction:column;gap:24px}
+  .steps-grid::before{display:none}
+  .why-grid{grid-template-columns:repeat(2,1fr)}
+  .uni-grid{grid-template-columns:repeat(2,1fr)}
+  .apply-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .services-detail,.how-it-works,.why-study,.universities,.testimonials,.faq,.apply-section{padding:64px 0!important}
+  .cta-banner{padding:64px 0!important}
+  .footer{padding-top:56px}
+  .detail-grid,.uni-grid,.why-grid{margin-top:32px}
+  .faq-list{margin-top:32px}
+}
+@media(max-width:600px){
+  .topbar{display:none}
+  .hero-content{padding:80px 18px 52px}
+  .uni-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:1fr 1fr}
+  .testi-slide{padding:0 4px}
+  .testi-card{padding:28px 18px}
+  .form-row{grid-template-columns:1fr}
+  .wa-float{left:14px;bottom:20px;width:50px;height:50px;font-size:1.35rem}
+  .btn-primary,.btn-outline,.btn-gold{padding:14px 20px;font-size:.95rem}
+  .drawer-panel{width:85vw}
+  .form-group input,.form-group textarea,.form-group select{font-size:16px}
+  .contact-form{padding:24px 18px}
+  .hero-h1{font-size:2rem}
+  .services-detail,.how-it-works,.why-study,.universities,.testimonials,.faq,.apply-section{padding:48px 0!important}
+  .cta-banner{padding:48px 0!important}
+  .footer{padding-top:40px}
+  .footer-grid{gap:22px}
+  .sec-title{font-size:1.5rem}
+  .detail-card{padding:26px 22px}
+  .testi-text{font-size:.95rem}
+  .hero-btns{flex-direction:column;align-items:flex-start}
+  .hero-btns .btn-primary,.hero-btns .btn-outline,.hero-btns .btn-gold{width:100%;max-width:320px;justify-content:center}
+}
+</style>
+</head>
+<body>
+
+<!-- PRELOADER -->
+<div id="preloader">
+  <img src="assets/logo.jpeg" alt="الحساني الصين" class="pl-logo" id="plLogo"/>
+  <div class="pl-brand" id="plBrand">ALHASANI CHINA</div>
+  <div class="pl-sub" id="plSub">خدمات الطلاب الدوليين</div>
+  <div class="pl-bar-wrap"><div class="pl-bar" id="plBar"></div></div>
+</div>
+
+<div id="scrollProg"></div>
+
+<a href="https://wa.me/8619050205951" class="wa-float" target="_blank" rel="noopener">
+  <i class="ri-whatsapp-fill"></i>
+</a>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-phones">
+      <a href="https://wa.me/8619050205951" target="_blank"><i class="ri-whatsapp-fill"></i>+86 190 5020 5951</a>
+      <a href="https://wa.me/8617868613035" target="_blank"><i class="ri-whatsapp-fill"></i>+86 178 6861 3035</a>
+      <a href="mailto:studyinchinaw@gmail.com"><i class="ri-mail-send-line"></i>studyinchinaw@gmail.com</a>
+    </div>
+    <div class="topbar-social">
+      <a href="#"><i class="ri-instagram-fill"></i></a>
+      <a href="#"><i class="ri-tiktok-fill"></i></a>
+      <a href="https://wa.me/8619050205951" target="_blank"><i class="ri-whatsapp-fill"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/logo.jpeg" alt="الحساني الصين"/>
+      <span>ALHASANI CHINA<small>الحساني الصين</small></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">الرئيسية</a></li>
+      <li><a href="index.html#about">من نحن</a></li>
+      <li><a href="student-services.html" class="active">الدراسة في الصين</a></li>
+      <li><a href="import-export.html">الاستيراد والتصدير</a></li>
+      <li><a href="#apply">تواصل معنا</a></li>
+    </ul>
+    <a href="https://wa.me/8619050205951" class="nav-cta" target="_blank">احصل على عرض</a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- DRAWER -->
+<div class="drawer" id="drawer">
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <div class="drawer-panel">
+    <button class="drawer-close" id="drawerClose"><i class="ri-close-line"></i></button>
+    <div class="drawer-logo">
+      <img src="assets/logo.jpeg" alt=""/>
+      <span>ALHASANI CHINA</span>
+    </div>
+    <ul class="drawer-links">
+      <li><a href="index.html"><i class="ri-home-5-line" style="color:var(--red);margin-left:8px"></i>الرئيسية</a></li>
+      <li><a href="index.html#about"><i class="ri-information-line" style="color:var(--red);margin-left:8px"></i>من نحن</a></li>
+      <li><a href="student-services.html"><i class="ri-graduation-cap-line" style="color:var(--red);margin-left:8px"></i>الدراسة في الصين</a></li>
+      <li><a href="import-export.html"><i class="ri-ship-2-line" style="color:var(--red);margin-left:8px"></i>الاستيراد والتصدير</a></li>
+      <li><a href="#apply"><i class="ri-phone-line" style="color:var(--red);margin-left:8px"></i>تواصل معنا</a></li>
+    </ul>
+    <a href="https://wa.me/8619050205951" class="drawer-cta" target="_blank"><i class="ri-whatsapp-fill"></i> ابدأ طلبك الآن</a>
+  </div>
+</div>
+
+<!-- MARQUEE -->
+<div class="marquee-strip">
+  <div class="marquee-inner">
+    <span>الدراسة في الصين</span><span>منح دراسية مجانية</span><span>قبول جامعي</span><span>تأشيرة طلابية</span><span>اللغة الصينية HSK</span><span>جامعة تشينغهوا</span><span>جامعة بيكين</span><span>جامعة فودان</span><span>سكن جامعي</span><span>استقبال من المطار</span><span>منحة CSC الحكومية</span><span>برامج ماجستير</span><span>الدراسة في الصين</span><span>منح دراسية مجانية</span><span>قبول جامعي</span><span>تأشيرة طلابية</span><span>اللغة الصينية HSK</span><span>جامعة تشينغهوا</span><span>جامعة بيكين</span><span>جامعة فودان</span><span>سكن جامعي</span><span>استقبال من المطار</span><span>منحة CSC الحكومية</span><span>برامج ماجستير</span>
+  </div>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div id="heroBg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge" id="heroBadge"><i class="ri-graduation-cap-line"></i>خدمات طلابية متكاملة</div>
+    <h1 class="hero-h1" id="heroH1">ادرس في <span class="accent">الصين</span><br/>مستقبلك يبدأ من هنا</h1>
+    <p class="hero-sub" id="heroSub">الحساني الصين توفر لك كل ما تحتاجه: من القبول الجامعي والمنح الدراسية إلى دعم التأشيرة والاستقبال من المطار. نرافقك في كل خطوة حتى تبدأ حياتك الأكاديمية في الصين بأمان وراحة.</p>
+    <div class="hero-btns" id="heroBtns">
+      <a href="#apply" class="btn-gold"><i class="ri-send-plane-line"></i>ابدأ طلبك الآن</a>
+      <a href="https://wa.me/8619050205951" class="btn-outline" target="_blank"><i class="ri-whatsapp-fill"></i>تواصل عبر واتساب</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- SERVICE DETAIL CARDS -->
+<section class="services-detail">
+  <div class="container">
+    <div class="text-center">
+      <span class="sec-tag">خدماتنا التفصيلية</span>
+      <h2 class="sec-title">كل ما تحتاجه للدراسة في الصين</h2>
+      <p class="sec-sub">نقدم لك خدمات شاملة ومتكاملة تغطي كل جوانب تجربتك الأكاديمية في الصين</p>
+    </div>
+    <div class="detail-grid">
+      <!-- 1 -->
+      <div class="detail-card">
+        <div class="dc-header">
+          <div class="dc-icon"><i class="ri-translate-2"></i></div>
+          <div>
+            <div class="dc-title">برامج اللغة الصينية</div>
+            <div class="dc-sub">Chinese Language Programs</div>
+          </div>
+        </div>
+        <div class="dc-desc">نساعدك في الالتحاق بأفضل برامج تعلم اللغة الصينية في الجامعات الصينية المعتمدة. سواء كنت مبتدئاً أو تريد الوصول لمستوى متقدم في اختبارات HSK، فريقنا يرشدك للبرنامج الأنسب.</div>
+        <div class="dc-includes">
+          <h5>ما يشمله هذا البرنامج</h5>
+          <ul class="dc-list">
+            <li><i class="ri-checkbox-circle-line"></i>اختيار برنامج اللغة المناسب لمستواك</li>
+            <li><i class="ri-checkbox-circle-line"></i>المساعدة في التقديم والحصول على القبول</li>
+            <li><i class="ri-checkbox-circle-line"></i>التواصل مع الجامعة وإجراءات التسجيل</li>
+            <li><i class="ri-checkbox-circle-line"></i>التحضير لاختبارات HSK من المستوى 1 إلى 6</li>
+            <li><i class="ri-checkbox-circle-line"></i>المتابعة المستمرة طوال فترة الدراسة</li>
+          </ul>
+        </div>
+      </div>
+      <!-- 2 -->
+      <div class="detail-card">
+        <div class="dc-header">
+          <div class="dc-icon"><i class="ri-graduation-cap-line"></i></div>
+          <div>
+            <div class="dc-title">برامج البكالوريوس والماجستير</div>
+            <div class="dc-sub">Bachelor & Master Degree Programs</div>
+          </div>
+        </div>
+        <div class="dc-desc">نرشدك لاختيار التخصص والجامعة الأنسب من بين أفضل الجامعات الصينية المصنفة عالمياً. نتولى كل إجراءات التقديم ونضمن لك أعلى نسبة قبول ممكنة.</div>
+        <div class="dc-includes">
+          <h5>ما يشمله هذا البرنامج</h5>
+          <ul class="dc-list">
+            <li><i class="ri-checkbox-circle-line"></i>استشارة متخصصة لاختيار التخصص والجامعة</li>
+            <li><i class="ri-checkbox-circle-line"></i>تجهيز ملف التقديم الكامل</li>
+            <li><i class="ri-checkbox-circle-line"></i>التقديم المتزامن لعدة جامعات</li>
+            <li><i class="ri-checkbox-circle-line"></i>متابعة طلب القبول حتى الحصول عليه</li>
+            <li><i class="ri-checkbox-circle-line"></i>دعم ما بعد القبول في إجراءات التأشيرة</li>
+          </ul>
+        </div>
+      </div>
+      <!-- 3 -->
+      <div class="detail-card">
+        <div class="dc-header">
+          <div class="dc-icon"><i class="ri-award-line"></i></div>
+          <div>
+            <div class="dc-title">منح دراسية في الصين</div>
+            <div class="dc-sub">Scholarships in China</div>
+          </div>
+        </div>
+        <div class="dc-desc">الصين توفر آلاف المنح الدراسية سنوياً للطلاب الدوليين. نساعدك في التعرف على المنح المتاحة وتجهيز ملف منحة قوي يرفع فرص قبولك.</div>
+        <div class="dc-includes">
+          <h5>ما يشمله هذا البرنامج</h5>
+          <ul class="dc-list">
+            <li><i class="ri-checkbox-circle-line"></i>معلومات شاملة عن منحة CSC الحكومية</li>
+            <li><i class="ri-checkbox-circle-line"></i>المنح الجامعية والمحلية المتاحة</li>
+            <li><i class="ri-checkbox-circle-line"></i>مساعدة في تجهيز ملف المنحة</li>
+            <li><i class="ri-checkbox-circle-line"></i>مراجعة رسالة الدوافع وكتابتها</li>
+            <li><i class="ri-checkbox-circle-line"></i>متابعة نتائج المنحة وما بعد القبول</li>
+          </ul>
+        </div>
+      </div>
+      <!-- 4 -->
+      <div class="detail-card">
+        <div class="dc-header">
+          <div class="dc-icon"><i class="ri-file-text-line"></i></div>
+          <div>
+            <div class="dc-title">مساعدة في التقديم</div>
+            <div class="dc-sub">Application Assistance</div>
+          </div>
+        </div>
+        <div class="dc-desc">تجهيز ملف التقديم يُعدّ من أهم مراحل الدراسة في الصين. نتولى مع الطالب إعداد كل الوثائق المطلوبة بدقة واحترافية لضمان أفضل صورة أمام لجان القبول.</div>
+        <div class="dc-includes">
+          <h5>ما يشمله هذا البرنامج</h5>
+          <ul class="dc-list">
+            <li><i class="ri-checkbox-circle-line"></i>إعداد وتنظيم جميع الوثائق المطلوبة</li>
+            <li><i class="ri-checkbox-circle-line"></i>كتابة ومراجعة رسالة الدوافع (SOP)</li>
+            <li><i class="ri-checkbox-circle-line"></i>توثيق وترجمة الشهادات الدراسية</li>
+            <li><i class="ri-checkbox-circle-line"></i>ملء استمارات التقديم الإلكترونية</li>
+            <li><i class="ri-checkbox-circle-line"></i>إرسال الطلبات ومتابعتها</li>
+          </ul>
+        </div>
+      </div>
+      <!-- 5 -->
+      <div class="detail-card">
+        <div class="dc-header">
+          <div class="dc-icon"><i class="ri-passport-line"></i></div>
+          <div>
+            <div class="dc-title">دعم التأشيرة الطلابية</div>
+            <div class="dc-sub">Student Visa Support</div>
+          </div>
+        </div>
+        <div class="dc-desc">الحصول على تأشيرة الدراسة الصينية (X1/X2) يتطلب تجهيز مستندات دقيقة. نوفر لك إرشاداً كاملاً خطوة بخطوة ونضمن اكتمال ملفك بدون أخطاء.</div>
+        <div class="dc-includes">
+          <h5>ما يشمله هذا البرنامج</h5>
+          <ul class="dc-list">
+            <li><i class="ri-checkbox-circle-line"></i>شرح متطلبات تأشيرة الدراسة X1/X2</li>
+            <li><i class="ri-checkbox-circle-line"></i>مراجعة جميع وثائق التأشيرة</li>
+            <li><i class="ri-checkbox-circle-line"></i>إرشادات الفحص الطبي قبل السفر</li>
+            <li><i class="ri-checkbox-circle-line"></i>دعم إجراءات الإقامة بعد الوصول</li>
+            <li><i class="ri-checkbox-circle-line"></i>متابعة تجديد الإقامة سنوياً</li>
+          </ul>
+        </div>
+      </div>
+      <!-- 6 -->
+      <div class="detail-card">
+        <div class="dc-header">
+          <div class="dc-icon"><i class="ri-home-smile-2-line"></i></div>
+          <div>
+            <div class="dc-title">الاستقبال من المطار والسكن</div>
+            <div class="dc-sub">Airport Pickup & Accommodation</div>
+          </div>
+        </div>
+        <div class="dc-desc">لا تقلق عند وصولك إلى الصين لأول مرة. فريقنا في الصين يستقبلك من المطار ويساعدك في التسكين وكل ما تحتاجه في أيامك الأولى.</div>
+        <div class="dc-includes">
+          <h5>ما يشمله هذا البرنامج</h5>
+          <ul class="dc-list">
+            <li><i class="ri-checkbox-circle-line"></i>استقبالك الشخصي من المطار</li>
+            <li><i class="ri-checkbox-circle-line"></i>مساعدة في تسجيل الوصول بالجامعة</li>
+            <li><i class="ri-checkbox-circle-line"></i>حجز سكن الجامعة أو الشقق الخارجية</li>
+            <li><i class="ri-checkbox-circle-line"></i>مساعدة في تسجيل الإقامة بالشرطة</li>
+            <li><i class="ri-checkbox-circle-line"></i>إرشادات عملية للحياة في الصين</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-it-works">
+  <div class="container">
+    <div class="text-center">
+      <span class="sec-tag">خطوات بسيطة</span>
+      <h2 class="sec-title">كيف يعمل معنا؟</h2>
+      <p class="sec-sub">عملية بسيطة وواضحة من أول تواصل حتى وصولك إلى جامعتك في الصين</p>
+    </div>
+    <div class="steps-grid" id="stepsGrid">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-title">تواصل معنا</div>
+        <div class="step-desc">تواصل عبر واتساب أو أرسل لنا رسالة وأخبرنا عن هدفك الدراسي</div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-title">قدّم الأوراق</div>
+        <div class="step-desc">نساعدك في تجهيز جميع الوثائق والمستندات المطلوبة للتقديم</div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-title">القبول الجامعي</div>
+        <div class="step-desc">نتقدم لك وننتظر القبول ثم نرشدك لإجراءات التأشيرة</div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-title">سافر للصين</div>
+        <div class="step-desc">فريقنا يستقبلك من المطار ويوصلك لجامعتك وسكنك</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY STUDY IN CHINA -->
+<section class="why-study">
+  <div class="container">
+    <div class="text-center">
+      <span class="sec-tag">لماذا الصين؟</span>
+      <h2 class="sec-title">5 أسباب تجعل الصين وجهتك الدراسية</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="why-icon"><i class="ri-money-dollar-circle-line"></i></div>
+        <div class="why-title">تكاليف معيشة منخفضة</div>
+        <div class="why-desc">تكاليف الدراسة والمعيشة في الصين من الأقل عالمياً مقارنة بجودة التعليم العالية</div>
+      </div>
+      <div class="why-item">
+        <div class="why-icon"><i class="ri-medal-line"></i></div>
+        <div class="why-title">جامعات مصنفة عالمياً</div>
+        <div class="why-desc">الصين تضم أكثر من 30 جامعة في تصنيف أفضل 500 جامعة عالمية</div>
+      </div>
+      <div class="why-item">
+        <div class="why-icon"><i class="ri-award-line"></i></div>
+        <div class="why-title">منح دراسية وفيرة</div>
+        <div class="why-desc">الحكومة الصينية والجامعات توفر آلاف المنح الكاملة للطلاب الدوليين سنوياً</div>
+      </div>
+      <div class="why-item">
+        <div class="why-icon"><i class="ri-briefcase-4-line"></i></div>
+        <div class="why-title">فرص عمل واعدة</div>
+        <div class="why-desc">الصين اقتصاد عالمي ضخم يفتح آفاق واسعة لخريجي جامعاتها حول العالم</div>
+      </div>
+      <div class="why-item">
+        <div class="why-icon"><i class="ri-translate-2"></i></div>
+        <div class="why-title">تعلم لغة عالمية</div>
+        <div class="why-desc">إتقان اللغة الصينية يفتح لك أبواباً مهنية ضخمة في الاقتصاد الآسيوي</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- UNIVERSITIES -->
+<section class="universities">
+  <div class="container">
+    <div class="text-center">
+      <span class="sec-tag">جامعات شريكة</span>
+      <h2 class="sec-title">أبرز الجامعات الصينية</h2>
+      <p class="sec-sub">نتعامل مع أفضل وأشهر الجامعات الصينية لضمان حصولك على أعلى جودة تعليمية</p>
+    </div>
+    <div class="uni-grid">
+      <div class="uni-card">
+        <div class="uni-rank">QS #14 عالمياً</div>
+        <div class="uni-name">جامعة تشينغهوا</div>
+        <div class="uni-name-en">Tsinghua University</div>
+        <div class="uni-info">
+          <span><i class="ri-map-pin-2-line"></i>بكين</span>
+          <span><i class="ri-flask-line"></i>الهندسة والتكنولوجيا</span>
+        </div>
+      </div>
+      <div class="uni-card">
+        <div class="uni-rank">QS #17 عالمياً</div>
+        <div class="uni-name">جامعة بيكين</div>
+        <div class="uni-name-en">Peking University</div>
+        <div class="uni-info">
+          <span><i class="ri-map-pin-2-line"></i>بكين</span>
+          <span><i class="ri-book-open-line"></i>الآداب والعلوم</span>
+        </div>
+      </div>
+      <div class="uni-card">
+        <div class="uni-rank">QS #47 عالمياً</div>
+        <div class="uni-name">جامعة شنغهاي جياو تونغ</div>
+        <div class="uni-name-en">Shanghai Jiao Tong University</div>
+        <div class="uni-info">
+          <span><i class="ri-map-pin-2-line"></i>شنغهاي</span>
+          <span><i class="ri-settings-3-line"></i>الهندسة والطب</span>
+        </div>
+      </div>
+      <div class="uni-card">
+        <div class="uni-rank">QS #67 عالمياً</div>
+        <div class="uni-name">جامعة فودان</div>
+        <div class="uni-name-en">Fudan University</div>
+        <div class="uni-info">
+          <span><i class="ri-map-pin-2-line"></i>شنغهاي</span>
+          <span><i class="ri-briefcase-4-line"></i>الطب والأعمال</span>
+        </div>
+      </div>
+      <div class="uni-card">
+        <div class="uni-rank">QS #44 عالمياً</div>
+        <div class="uni-name">جامعة تشجيانغ</div>
+        <div class="uni-name-en">Zhejiang University</div>
+        <div class="uni-info">
+          <span><i class="ri-map-pin-2-line"></i>هانغتشو</span>
+          <span><i class="ri-computer-line"></i>التكنولوجيا والعلوم</span>
+        </div>
+      </div>
+      <div class="uni-card">
+        <div class="uni-rank">متخصصة في اللغة</div>
+        <div class="uni-name">جامعة بكين للغات</div>
+        <div class="uni-name-en">Beijing Language & Culture Univ.</div>
+        <div class="uni-info">
+          <span><i class="ri-map-pin-2-line"></i>بكين</span>
+          <span><i class="ri-translate-2"></i>اللغة والثقافة</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="container">
+    <div class="text-center">
+      <span class="sec-tag">قصص نجاح</span>
+      <h2 class="sec-title">طلابنا يتحدثون</h2>
+    </div>
+    <div class="testi-wrap">
+      <div class="testi-track" id="testiTrack">
+        <div class="testi-slide">
+          <div class="testi-card">
+            <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <div class="testi-text">"حصلت على قبول في جامعة تشينغهوا بمساعدة فريق الحساني الصين. كانوا معي في كل خطوة من التقديم حتى التسجيل في الجامعة. خدمة احترافية جداً وفريق متجاوب على مدار الساعة."</div>
+            <div class="testi-author">
+              <div class="testi-avatar">خ</div>
+              <div>
+                <div class="testi-name">خالد البلوشي</div>
+                <div class="testi-country"><i class="ri-map-pin-2-line"></i>طالب هندسة — سلطنة عمان</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-slide">
+          <div class="testi-card">
+            <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <div class="testi-text">"حصلت على منحة CSC الكاملة وهذا كان حلمي. شكراً لفريق الحساني الصين الذي ساعدني في تجهيز الملف ومراجعة رسالة الدوافع. الآن أدرس الطب في جامعة فودان."</div>
+            <div class="testi-author">
+              <div class="testi-avatar">ن</div>
+              <div>
+                <div class="testi-name">نور الهدى المغربي</div>
+                <div class="testi-country"><i class="ri-map-pin-2-line"></i>طالبة طب — المغرب</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-slide">
+          <div class="testi-card">
+            <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <div class="testi-text">"أول مرة أسافر للصين وكنت خائفاً جداً. لكن فريق الحساني الصين كان في المطار ينتظرني واصطحبني للجامعة. خدمة ما توقعتها. أنصح كل طالب يريد الدراسة في الصين بهم."</div>
+            <div class="testi-author">
+              <div class="testi-avatar">ع</div>
+              <div>
+                <div class="testi-name">عمر زيادي</div>
+                <div class="testi-country"><i class="ri-map-pin-2-line"></i>طالب اقتصاد — الجزائر</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-dots">
+        <button class="testi-dot active" data-i="0"></button>
+        <button class="testi-dot" data-i="1"></button>
+        <button class="testi-dot" data-i="2"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="container">
+    <div class="text-center">
+      <span class="sec-tag">الأسئلة الشائعة</span>
+      <h2 class="sec-title">أسئلة يسألها الطلاب كثيراً</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item open">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          ما هي متطلبات الالتحاق بالجامعات الصينية للطلاب الدوليين؟
+          <i class="ri-arrow-down-s-line"></i>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">عموماً تحتاج إلى شهادة الثانوية العامة للبكالوريوس، أو شهادة البكالوريوس للماجستير. بعض البرامج تتطلب شهادة HSK في اللغة الصينية، والبعض الآخر يُدرَّس باللغة الإنجليزية ويتطلب IELTS أو TOEFL. فريقنا يساعدك على تحديد المتطلبات الدقيقة لكل جامعة وبرنامج.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          كيف أحصل على منحة دراسية كاملة في الصين؟
+          <i class="ri-arrow-down-s-line"></i>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">منحة CSC الحكومية الصينية هي الأشهر وتغطي الرسوم الدراسية والسكن والراتب الشهري والتأمين الصحي. يفتح التقديم عادةً في الفترة من فبراير إلى مارس كل عام. كما تتوفر منح جامعية بإمكانية التقديم المباشر. فريقنا يرشدك لأنسب المنح لملفك ويساعدك في التقديم.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          كم تبلغ تكاليف الدراسة والمعيشة في الصين سنوياً؟
+          <i class="ri-arrow-down-s-line"></i>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">تتراوح الرسوم الدراسية بين 2000 و6000 دولار سنوياً حسب الجامعة والتخصص. وتكاليف المعيشة الشهرية في المتوسط بين 300 و600 دولار تشمل السكن والأكل والمواصلات. الصين من أوفر الوجهات الدراسية مقارنة بكندا وأستراليا وأوروبا.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          هل يمكن الدراسة في الصين باللغة الإنجليزية؟
+          <i class="ri-arrow-down-s-line"></i>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">نعم، الكثير من الجامعات الصينية الكبرى تقدم برامج بكالوريوس وماجستير باللغة الإنجليزية، خاصة في تخصصات الطب والهندسة والأعمال وتقنية المعلومات. يمكنك التقديم دون معرفة مسبقة باللغة الصينية، ثم تعلمها تدريجياً خلال دراستك.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          كم يستغرق معالجة طلب القبول والتأشيرة؟
+          <i class="ri-arrow-down-s-line"></i>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">عادةً يستغرق القبول الجامعي من 4 إلى 8 أسابيع بعد تقديم الملف الكامل. أما التأشيرة الصينية فتستغرق عموماً من أسبوع إلى أسبوعين. ننصح ببدء الإجراءات قبل 4 إلى 6 أشهر من موعد بداية الفصل الدراسي.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPLY SECTION -->
+<section class="apply-section" id="apply">
+  <div class="container">
+    <div class="text-center">
+      <span class="sec-tag">ابدأ رحلتك</span>
+      <h2 class="sec-title">قدّم طلبك الآن</h2>
+      <p class="sec-sub">تواصل معنا اليوم وسيرد عليك مستشارنا المتخصص خلال 24 ساعة</p>
+    </div>
+    <div class="apply-grid">
+      <div class="apply-info">
+        <h3>نحن هنا لمساعدتك</h3>
+        <p>سواء كان لديك سؤال عن المنح الدراسية، القبول الجامعي، التأشيرة أو أي شيء آخر — فريق الحساني الصين جاهز للرد عليك بكل صدر رحب واحترافية.</p>
+        <div class="apply-contact-items">
+          <div class="aci">
+            <div class="aci-icon"><i class="ri-whatsapp-fill"></i></div>
+            <div><div class="aci-label">واتساب الرئيسي</div><div class="aci-val"><a href="https://wa.me/8619050205951" target="_blank">+86 190 5020 5951</a></div></div>
+          </div>
+          <div class="aci">
+            <div class="aci-icon"><i class="ri-whatsapp-fill"></i></div>
+            <div><div class="aci-label">واتساب الثاني</div><div class="aci-val"><a href="https://wa.me/8617868613035" target="_blank">+86 178 6861 3035</a></div></div>
+          </div>
+          <div class="aci">
+            <div class="aci-icon"><i class="ri-mail-send-line"></i></div>
+            <div><div class="aci-label">البريد الإلكتروني</div><div class="aci-val"><a href="mailto:studyinchinaw@gmail.com">studyinchinaw@gmail.com</a></div></div>
+          </div>
+          <div class="aci">
+            <div class="aci-icon"><i class="ri-map-pin-2-line"></i></div>
+            <div><div class="aci-label">الموقع</div><div class="aci-val">الصين — خدمة عالمية</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="apply-form">
+        <h3>أرسل طلبك الآن</h3>
+        <div class="form-row">
+          <div class="form-group"><label>الاسم الكامل</label><input type="text" placeholder="أدخل اسمك الكامل"/></div>
+          <div class="form-group"><label>الجنسية</label><input type="text" placeholder="بلدك"/></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>رقم الواتساب</label><input type="tel" placeholder="+xxx xxx xxx"/></div>
+          <div class="form-group"><label>البريد الإلكتروني</label><input type="email" placeholder="example@email.com"/></div>
+        </div>
+        <div class="form-group">
+          <label>الخدمة المطلوبة</label>
+          <select>
+            <option value="">اختر الخدمة</option>
+            <option>برامج اللغة الصينية</option>
+            <option>برامج البكالوريوس</option>
+            <option>برامج الماجستير</option>
+            <option>منح دراسية CSC</option>
+            <option>مساعدة في التقديم</option>
+            <option>دعم التأشيرة</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>التخصص المرغوب</label>
+          <input type="text" placeholder="مثال: هندسة، طب، اقتصاد..."/>
+        </div>
+        <div class="form-group"><label>رسالتك أو استفسارك</label><textarea placeholder="اكتب هنا أي استفسار أو معلومة إضافية..."></textarea></div>
+        <button class="form-submit" id="applyFormBtn" onclick="submitForm('applyFormBtn')"><i class="ri-send-plane-line"></i>إرسال الطلب</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="cta-banner">
+  <div class="container">
+    <h2>لا تضيّع الفرصة — ابدأ مستقبلك في الصين</h2>
+    <p>آلاف الطلاب بدأوا رحلتهم معنا. أنت التالي. تواصل الآن وفريقنا ينتظرك.</p>
+    <div class="cta-btns">
+      <a href="https://wa.me/8619050205951" class="btn-primary" target="_blank"><i class="ri-whatsapp-fill"></i>تواصل الآن عبر واتساب</a>
+      <a href="index.html" class="btn-outline"><i class="ri-home-5-line"></i>العودة للرئيسية</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="fb-logo">
+          <img src="assets/logo.jpeg" alt="الحساني الصين"/>
+          <span>ALHASANI CHINA</span>
+        </div>
+        <p>الحساني الصين — شركة متخصصة في الاستيراد والتصدير وخدمات الطلاب الدوليين في الصين. نلتزم بالجودة والمصداقية في كل ما نقدمه.</p>
+        <div class="footer-social">
+          <a href="#"><i class="ri-instagram-fill"></i></a>
+          <a href="#"><i class="ri-tiktok-fill"></i></a>
+          <a href="https://wa.me/8619050205951" target="_blank"><i class="ri-whatsapp-fill"></i></a>
+          <a href="mailto:studyinchinaw@gmail.com"><i class="ri-mail-send-line"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>روابط سريعة</h4>
+        <ul class="footer-links">
+          <li><a href="index.html"><i class="ri-arrow-left-s-line"></i>الرئيسية</a></li>
+          <li><a href="index.html#about"><i class="ri-arrow-left-s-line"></i>من نحن</a></li>
+          <li><a href="student-services.html"><i class="ri-arrow-left-s-line"></i>الدراسة في الصين</a></li>
+          <li><a href="import-export.html"><i class="ri-arrow-left-s-line"></i>الاستيراد والتصدير</a></li>
+          <li><a href="#apply"><i class="ri-arrow-left-s-line"></i>تواصل معنا</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>خدمات الطلاب</h4>
+        <ul class="footer-links">
+          <li><a href="#"><i class="ri-arrow-left-s-line"></i>برامج اللغة الصينية</a></li>
+          <li><a href="#"><i class="ri-arrow-left-s-line"></i>برامج البكالوريوس</a></li>
+          <li><a href="#"><i class="ri-arrow-left-s-line"></i>المنح الدراسية</a></li>
+          <li><a href="#"><i class="ri-arrow-left-s-line"></i>مساعدة في التقديم</a></li>
+          <li><a href="#"><i class="ri-arrow-left-s-line"></i>دعم التأشيرة</a></li>
+          <li><a href="#"><i class="ri-arrow-left-s-line"></i>الاستقبال والسكن</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>الجامعات الشريكة</h4>
+        <ul class="footer-links">
+          <li><a href="#"><i class="ri-arrow-left-s-line"></i>جامعة تشينغهوا</a></li>
+          <li><a href="#"><i class="ri-arrow-left-s-line"></i>جامعة بيكين</a></li>
+          <li><a href="#"><i class="ri-arrow-left-s-line"></i>جامعة فودان</a></li>
+          <li><a href="#"><i class="ri-arrow-left-s-line"></i>جامعة شنغهاي SJTU</a></li>
+          <li><a href="#"><i class="ri-arrow-left-s-line"></i>جامعة تشجيانغ</a></li>
+          <li><a href="#"><i class="ri-arrow-left-s-line"></i>جامعة بكين للغات</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>تواصل معنا</h4>
+        <div class="footer-contact-list">
+          <div class="fci-f"><i class="ri-whatsapp-fill"></i><div><a href="https://wa.me/8619050205951" target="_blank">+86 190 5020 5951</a></div></div>
+          <div class="fci-f"><i class="ri-whatsapp-fill"></i><div><a href="https://wa.me/8617868613035" target="_blank">+86 178 6861 3035</a></div></div>
+          <div class="fci-f"><i class="ri-mail-send-line"></i><div><a href="mailto:studyinchinaw@gmail.com">studyinchinaw@gmail.com</a></div></div>
+          <div class="fci-f"><i class="ri-map-pin-2-line"></i><div>الصين — خدمة عالمية</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 ALHASANI CHINA — الحساني الصين. جميع الحقوق محفوظة.</p>
+      <p style="font-family:var(--fp)">China · Worldwide</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+/* ── PRELOADER — shows only ONCE per browser session ── */
+window.addEventListener('DOMContentLoaded',function(){
+  if(sessionStorage.getItem('alhs_seen')){
+    document.getElementById('preloader').style.display='none';
+    heroEntrance();
+  } else {
+    sessionStorage.setItem('alhs_seen','1');
+    var tl=gsap.timeline({onComplete:function(){
+      document.getElementById('preloader').style.display='none';
+      heroEntrance();
+    }});
+    tl.to('#plLogo',{opacity:1,scale:1,duration:.7,ease:'back.out(1.7)'})
+      .to('#plBrand',{opacity:1,y:0,duration:.5},'-=.3')
+      .to('#plSub',{opacity:1,y:0,duration:.4},'-=.2')
+      .to('#plBar',{width:'100%',duration:1.4,ease:'power2.inOut'},'-=.2')
+      .to('#preloader',{opacity:0,duration:.5,delay:.2});
+  }
+});
+
+function heroEntrance(){
+  gsap.to('#heroBadge',{opacity:1,y:0,duration:.6,ease:'back.out(1.5)',delay:.1});
+  gsap.to('#heroH1',{opacity:1,y:0,duration:.7,ease:'power3.out',delay:.25});
+  gsap.to('#heroSub',{opacity:1,y:0,duration:.6,ease:'power3.out',delay:.45});
+  gsap.to('#heroBtns',{opacity:1,y:0,duration:.6,ease:'power3.out',delay:.6});
+}
+
+/* ── Native scroll — no Lenis, no lag ── */
+window.addEventListener('scroll', ScrollTrigger.update, {passive:true});
+
+/* ── Scroll progress (passive listener — no lag) ── */
+window.addEventListener('scroll',function(){
+  var pct=window.scrollY/(document.body.scrollHeight-window.innerHeight)*100;
+  document.getElementById('scrollProg').style.width=pct+'%';
+},{passive:true});
+
+ScrollTrigger.create({trigger:'body',start:'80px top',onEnter:function(){document.getElementById('navbar').classList.add('scrolled');},onLeaveBack:function(){document.getElementById('navbar').classList.remove('scrolled');}});
+
+/* ── Scroll animations — replay every time element enters OR leaves viewport ── */
+var _io=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(e.isIntersecting){
+      e.target.style.transitionDuration='';
+      e.target.classList.add('in');
+    }
+  });
+},{threshold:.12,rootMargin:'-20px 0px -60px 0px'});
+
+var _ioR=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(!e.isIntersecting){
+      var r=e.boundingClientRect;
+      if(r.bottom<0||r.top>window.innerHeight){
+        e.target.style.transitionDuration='0s';
+        e.target.classList.remove('in');
+        requestAnimationFrame(function(){e.target.style.transitionDuration='';});
+      }
+    }
+  });
+},{threshold:0});
+
+function _anim(sel,cls,delayFn){
+  document.querySelectorAll(sel).forEach(function(el,i){
+    cls.split(' ').forEach(function(c){if(c)el.classList.add(c);});
+    var d=delayFn?delayFn(i):0;
+    if(d)el.style.transitionDelay=d+'s';
+    _io.observe(el);
+    _ioR.observe(el);
+  });
+}
+
+/* section headers — stagger tag→title→sub */
+_anim('.sec-tag','anm anm-tag');
+_anim('.sec-title','anm anm-up',function(){return .08;});
+_anim('.sec-sub','anm anm-up',function(){return .18;});
+/* detail service cards */
+_anim('.detail-card','anm anm-up',function(i){return (i%2)*.12;});
+/* process steps */
+_anim('.step','anm anm-up',function(i){return i*.12;});
+/* why study */
+_anim('.why-item','anm anm-scale',function(i){return (i%3)*.1;});
+/* universities */
+_anim('.uni-card','anm anm-scale',function(i){return (i%3)*.1;});
+/* testimonials */
+_anim('.testi-card','anm anm-scale');
+/* faq */
+_anim('.faq-item','anm anm-up',function(i){return i*.08;});
+/* apply */
+_anim('.apply-info','anm anm-left');
+_anim('.apply-form','anm anm-right');
+/* cta banner */
+_anim('.cta-banner h2','anm anm-up');
+_anim('.cta-banner p','anm anm-up',function(){return .12;});
+_anim('.cta-btns','anm anm-up',function(){return .25;});
+/* footer */
+_anim('.footer-brand','anm anm-up');
+_anim('.footer-col','anm anm-up',function(i){return i*.1;});
+_anim('.fci-f','anm anm-up',function(i){return i*.07;});
+
+// HAMBURGER
+var hamburger=document.getElementById('hamburger');
+var drawer=document.getElementById('drawer');
+var drawerClose=document.getElementById('drawerClose');
+var drawerOverlay=document.getElementById('drawerOverlay');
+hamburger.addEventListener('click',function(){drawer.classList.add('open');});
+drawerClose.addEventListener('click',function(){drawer.classList.remove('open');});
+drawerOverlay.addEventListener('click',function(){drawer.classList.remove('open');});
+
+// TESTIMONIALS
+var curSlide=0;
+var track=document.getElementById('testiTrack');
+var dots=document.querySelectorAll('.testi-dot');
+function goTo(i){curSlide=i;track.style.transform='translateX('+i*100+'%)';dots.forEach(function(d,j){d.classList.toggle('active',j===i);});}
+dots.forEach(function(d){d.addEventListener('click',function(){goTo(+d.dataset.i);});});
+setInterval(function(){goTo((curSlide+1)%3);},5000);
+
+// FAQ
+function toggleFaq(btn){
+  var item=btn.closest('.faq-item');
+  var isOpen=item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(function(i){i.classList.remove('open');});
+  if(!isOpen) item.classList.add('open');
+}
+
+// FORM
+function submitForm(btnId){
+  var btn=document.getElementById(btnId);
+  btn.disabled=true;
+  btn.innerHTML='<i class="ri-loader-4-line spin-anim"></i> جارٍ الإرسال...';
+  setTimeout(function(){btn.disabled=false;btn.innerHTML='<i class="ri-check-line"></i> تم الإرسال بنجاح!';btn.style.background='#16a34a';},1800);
+}
+</script>
+</body>
+</html>
