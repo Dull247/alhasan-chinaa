@@ -1,0 +1,10 @@
+# Claude Code internal config — not needed on GitHub
+.claude/
+
+# Unused upload files (not referenced in any HTML)
+uploads/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
